@@ -1,0 +1,28 @@
+@mixin arrow {
+    cursor: pointer;
+    position: relative;
+    &::after {
+        transition: all .4s;
+        content: "";
+        display: block;
+        position: absolute;
+        right: 24px;
+        top: calc(50% + 1px);
+        border: solid $dark-blue;
+        border-width: 0 1.5px 1.5px 0;
+        padding: 2px;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+    // .right {
+    //     transform: rotate(-45deg);
+    // }
+    // .left {
+    //     transform: rotate(135deg);
+    // }
+    // .up {
+    //     transform: rotate(-135deg);
+    // }
+    // .down {
+    //     transform: rotate(45deg);
+    // }
+}

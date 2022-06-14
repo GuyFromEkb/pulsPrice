@@ -1,0 +1,53 @@
+.menu {
+    width: 314px;
+    &__title {
+        position: relative;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        width: 314px;
+        height: 80px;
+        background: $blue;
+        h1 {
+            display: block;
+        }
+        svg {
+            position: absolute;
+            top: calc(50% + 1px);
+            right: 20px;
+            transform: translateY(-50%);
+        }
+    }
+    &__list {
+        list-style: none
+    }
+    &__item {
+        padding-left: 40px;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        @include arrow;
+        svg {
+            margin-right: 20px;
+        }
+        a {
+            text-decoration: none;
+            font-family: 'Arial';
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 20px;
+            color: $dark-blue;
+        }
+    }
+    &__active {
+        background: #F2FBFF;
+        &::after {
+            opacity: 0;
+        }
+        svg {
+            path {
+                fill: #028DD8;
+            }
+        }
+    }
+}
