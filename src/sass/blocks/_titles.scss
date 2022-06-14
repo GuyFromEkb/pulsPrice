@@ -1,9 +1,58 @@
 .title {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    color: $dark-blue;
     &_menu {
         font-family: 'Montserrat';
         font-weight: 600;
         font-size: 18px;
         line-height: 20px;
-        color: #FFFFFF;
+        color: #fff;
+    }
+    &_tariff {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: $dark-blue;
+    }
+    &_rising {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 29px;
+        color: $blue;
+    }
+    &_info {
+        margin-top: 21px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 40px;
+        letter-spacing: 0.01em;
+        color: $dark-blue;
+    }
+}
+
+.subtitle {
+    font-size: 24px;
+    line-height: 32px;
+    color: $dark-blue;
+    &_tariff {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: $dark-blue;
+    }
+    &_sale {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        color: $dark-blue;
+    }
+    &_info {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 31px;
+        color: #5E7491;
     }
 }

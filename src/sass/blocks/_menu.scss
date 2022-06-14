@@ -1,5 +1,8 @@
 .menu {
-    width: 314px;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100%;
+    max-width: 314px;
     &__title {
         position: relative;
         padding-left: 30px;
@@ -8,7 +11,7 @@
         width: 314px;
         height: 80px;
         background: $blue;
-        h1 {
+        h2 {
             display: block;
         }
         svg {
