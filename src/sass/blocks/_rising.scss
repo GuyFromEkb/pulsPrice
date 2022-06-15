@@ -1,0 +1,33 @@
+.rising {
+    margin-top: 51px;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__block {
+        position: relative;
+        padding: 30px 0 0 40px;
+        margin-top: 30px;
+        width: 744px;
+        height: 275px;
+        background: #FFFFFF;
+        border: 1px solid #F2F4F7;
+        box-shadow: 0px 4px 4px rgba(68, 118, 145, 0.16);
+        border-radius: 5px;
+        p {
+            width: 505px;
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 29px;
+            color: #5E7491;
+        }
+        .second-block {
+            margin-top: 16px;
+        }
+    }
+    &__picture {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

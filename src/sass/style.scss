@@ -9,7 +9,12 @@
     padding: 0;
 }
 
+body {
+    position: relative;
+}
+
 .container {
+    position: relative;
     width: 1530px;
 }
 
@@ -25,4 +30,6 @@
 @import "blocks/rising";
 @import "blocks/button";
 @import "blocks/sale";
-@import "blocks/service"
+@import "blocks/service";
+@import "blocks/slide-tariff";
+@import "blocks/slide-region";

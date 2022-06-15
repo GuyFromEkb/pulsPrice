@@ -1,0 +1,20 @@
+.main {
+    margin-left: 320px;
+    max-width: 1606px;
+    padding: 0 40px 80px 30px;
+    background: #F2F4F7;
+    border: 8px solid rgba(94, 116, 145, 0.1);
+    border-left: none;
+    h1 {
+        display: inline-block;
+    }
+    &__phone {
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: #5E7491;
+        margin-top: 13px;
+        float: right;
+    }
+}

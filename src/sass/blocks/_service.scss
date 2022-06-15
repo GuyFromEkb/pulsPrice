@@ -1,0 +1,18 @@
+.service {
+    margin-top: 48px;
+    &__descrp {
+        margin-top: 20px;
+        width: 699px;
+        font-size: 18px;
+        line-height: 22px;
+        color: #5E7491;
+    }
+    &__consultation {
+        position: relative;
+    }
+    .second-descrp {
+        width: 680px;
+        margin-top: 30px;
+        color: $dark-blue;
+    }
+}

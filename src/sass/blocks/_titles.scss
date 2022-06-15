@@ -23,13 +23,17 @@
         line-height: 29px;
         color: $blue;
     }
-    &_info {
+    &_info,
+    &_region {
         margin-top: 21px;
         font-weight: 700;
         font-size: 24px;
         line-height: 40px;
         letter-spacing: 0.01em;
         color: $dark-blue;
+    }
+    &_region {
+        margin-top: 40px;
     }
 }
 
@@ -53,6 +57,13 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 31px;
+        color: #5E7491;
+    }
+    &_region {
+        margin-top: 30px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 30px;
         color: #5E7491;
     }
 }

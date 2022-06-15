@@ -1,0 +1,69 @@
+.button {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    //
+    border: none;
+    background: $blue;
+    box-shadow: 0px 4px 20px rgba(68, 118, 145, 0.1);
+    border-radius: 5px;
+    color: #FFFFFF;
+    outline: none !important;
+    transition: .2s;
+    &:active {
+        transform: scale(1.01);
+    }
+    &_rising {
+        position: absolute;
+        bottom: 40px;
+        height: 56px;
+        width: 350px;
+    }
+    &_slide {
+        position: absolute;
+        top: 50%;
+        right: -23px;
+        transform: translateY(-50%);
+        width: 70px;
+        height: 70px;
+        border-radius: 60%;
+        &:active {
+            transform: translateY(-50%) scale(1.02);
+        }
+    }
+    &_service {
+        top: 0;
+        transform: none;
+        &:active {
+            transform: scale(1.02);
+        }
+    }
+    &_package {
+        position: absolute;
+        bottom: 24px;
+        width: 279px;
+        height: 56px;
+        justify-self: flex-end;
+    }
+    &_consultation {
+        margin-top: 20px;
+        background: inherit;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: #028DD8;
+        height: 57px;
+        width: 294px;
+        border-radius: 8px;
+        border: 2px solid #028DD8;
+    }
+    &_region {
+        position: absolute;
+        bottom: 40px;
+        height: 56px;
+        width: 474px;
+    }
+}

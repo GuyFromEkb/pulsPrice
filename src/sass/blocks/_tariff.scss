@@ -1,0 +1,98 @@
+.tariff {
+    margin-top: 30px;
+    &__info {
+        max-width: 1069px;
+        max-height: 210px;
+        display: flex;
+        border: 1px solid #F2F4F7;
+        box-shadow: 0px 4px 4px rgba(68, 118, 145, 0.16);
+        border-radius: 5px;
+    }
+    &__current {
+        width: 376px;
+        padding: 40px 0 38px 40px;
+        background-color: #F2FBFF;
+        &_wrap-stars {
+            margin-top: 7px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        &_wrap-link {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        p {
+            display: block;
+            margin-left: 10px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 29px;
+            color: #F18334;
+        }
+    }
+    &__stars {
+        display: inline-block;
+        margin-left: 8px;
+    }
+    &__manager,
+    &__sms {
+        background: #fff;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        width: 346px;
+        a {
+            text-decoration: none;
+            position: relative;
+            width: 154px;
+            display: block;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            color: #5E7491;
+        }
+        svg {
+            position: absolute;
+            top: 50%;
+            right: -70px;
+            transform: translateY(-50%);
+        }
+        .svg-left {
+            right: -54px;
+        }
+    }
+    &__manager {
+        padding-left: 90px;
+    }
+    &__question {
+        display: flex;
+        margin-top: 40px;
+        width: 1069px;
+        height: 170px;
+        border: 1px solid #F2F4F7;
+        box-shadow: 0px 4px 4px rgba(68, 118, 145, 0.16);
+        border-radius: 5px;
+    }
+    &__question-desrp {
+        background: #fff;
+        padding: 45px 133px 45px 60px;
+        width: 899px;
+        p {
+            font-size: 18px;
+            line-height: 27px;
+            color: $blue;
+        }
+    }
+    &__question-mark {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 170px;
+        background: rgba(2, 141, 216, 0.25);
+    }
+}
