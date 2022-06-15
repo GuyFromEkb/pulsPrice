@@ -16,4 +16,35 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+    // slider
+
+    var slider = tns({
+        container: '.carrusel-tariff',
+        items: 1,
+        slideBy: 'page',
+        nav: false,
+        controls: false,
+    });
+
+    var slider2 = tns({
+        container: '.carrusel-region',
+        items: 1,
+        slideBy: 'page',
+        nav: false,
+        controls: false,
+    });
+
+
+    document.querySelector('.button_service').addEventListener('click', (e) => {
+        slider.goTo('next');
+        slider2.goTo('next');
+    })
+
+
+
+
+
+
+
 });

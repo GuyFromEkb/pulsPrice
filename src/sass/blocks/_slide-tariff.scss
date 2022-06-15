@@ -140,3 +140,42 @@
         }
     }
 }
+
+.slide__start {
+    overflow: hidden;
+    .info {
+        &_img {
+            top: -35px;
+            left: 310px;
+        }
+        &_other {
+            font-size: 18px;
+            line-height: 19px;
+            color: #8F9EB2;
+            opacity: 0.5;
+        }
+    }
+    .package {
+        width: 222px;
+        height: 500px;
+        &_stars {
+            width: 190px;
+        }
+        &_name {
+            // margin: 0;
+            font-size: 14px;
+        }
+        &_star-img {
+            width: auto;
+            height: 20px;
+            object-fit: cover;
+        }
+        &_list {
+            width: 190px;
+            li {
+                font-size: 15px;
+                line-height: 19px;
+            }
+        }
+    }
+}

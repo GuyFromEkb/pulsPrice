@@ -69,3 +69,28 @@
         }
     }
 }
+
+.slide-region_three {
+    .region {
+        &_list {
+            margin-top: 20px;
+            li {
+                list-style: none;
+                background: url("../icons/service/ul-chek.png") no-repeat 0 50%;
+                padding-left: 46px;
+                margin-top: 10px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 31px;
+                color: #8F9EB2;
+            }
+        }
+        &_map {
+            width: 755px;
+            height: auto;
+            object-fit: cover;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
