@@ -105,6 +105,19 @@ window.addEventListener('DOMContentLoaded', () => {
         rewind: false,
         nav: false,
         controls: false,
+        responsive: {
+            700: {},
+            1366: {
+                items: 2,
+                edgePadding: 100,
+                gutter: 120,
+            },
+            1919: {
+                edgePadding: 0,
+                gutter: 0,
+                items: 4
+            }
+        }
     });
 
     //Modal Call

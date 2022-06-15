@@ -3,7 +3,6 @@
 @import "base/variables";
 @import "base/mixins";
 * {
-    target: "";
     font-family: 'Open Sans', 'Montserrat', sans-serif;
     font-size: 14px;
     margin: 0;
@@ -20,7 +19,7 @@ body {
 
 .container {
     position: relative;
-    width: 1530px;
+    max-width: 1530px;
 }
 
 .disp-no {
@@ -44,4 +43,5 @@ body {
 @import "blocks/slide-region";
 @import "blocks/tiny-slider.scss";
 @import "blocks/hide-up";
-@import "blocks/modal"
+@import "blocks/modal";
+@import "blocks/media"
