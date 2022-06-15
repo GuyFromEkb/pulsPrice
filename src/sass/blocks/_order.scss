@@ -59,4 +59,9 @@
         top: 0;
         right: 0;
     }
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }

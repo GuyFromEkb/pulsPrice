@@ -3,6 +3,7 @@
 @import "base/variables";
 @import "base/mixins";
 * {
+    target: "";
     font-family: 'Open Sans', 'Montserrat', sans-serif;
     font-size: 14px;
     margin: 0;
@@ -13,9 +14,17 @@ body {
     position: relative;
 }
 
+.mb30px {
+    margin-bottom: 30px;
+}
+
 .container {
     position: relative;
     width: 1530px;
+}
+
+.disp-no {
+    display: none;
 }
 
 .new-line {
@@ -33,4 +42,6 @@ body {
 @import "blocks/service";
 @import "blocks/slide-tariff";
 @import "blocks/slide-region";
-@import "blocks/tiny-slider.scss"
+@import "blocks/tiny-slider.scss";
+@import "blocks/hide-up";
+@import "blocks/modal"

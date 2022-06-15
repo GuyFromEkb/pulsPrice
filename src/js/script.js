@@ -1,5 +1,15 @@
 "use strict";
 window.addEventListener('DOMContentLoaded', () => {
+    //Link  Увеличить заказы
+    const linkShowService = document.querySelector('.tariff__current_wrap-link');
+
+    linkShowService.addEventListener('click', (e) => {
+        console.log('clickssssssss');
+        e.preventDefault();
+        btnShowTariff.click();
+    })
+
+
     //MENU
     const menuList = document.querySelector('.menu__list');
     menuList.addEventListener('click', (e) => {
@@ -17,30 +27,141 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // slider
+    //SHOW-BLOCK
+    const btnShowSale = document.querySelector('#show-sale'),
+        btnShowTariff = document.querySelector('#show-service'),
+        sectionSale = document.querySelector('.sale'),
+        sectionService = document.querySelector('.service');
 
-    var slider = tns({
+    btnShowSale.addEventListener('click', (e) => {
+        focusOff(e);
+        hideSection(sectionService);
+        ShowSection(sectionSale);
+
+    });
+
+    btnShowTariff.addEventListener('click', (e) => {
+        focusOff(e);
+        hideSection(sectionSale);
+        ShowSection(sectionService);
+
+    });
+
+    function focusOff(e) {
+        document.querySelectorAll('.rising__block').forEach(el => {
+            el.classList.add('focus-off');
+        });
+        e.target.closest('.rising__block').classList.remove('focus-off');
+    }
+
+    function ShowSection(section) {
+        section.classList.remove('disp-no');
+        section.scrollIntoView({
+            block: "start",
+            behavior: "smooth"
+        });
+        section.querySelector('.hiden-block').classList.add('show');
+    }
+
+    function hideSection(section) {
+        section.classList.add('disp-no');
+        section.querySelector('.hiden-block').classList.remove('show');
+    }
+
+
+
+
+    // SLIDER
+    const btnSale = document.querySelector('#btn-carrusel-sale'),
+        btnTariff = document.querySelector('#btn-carrusel-tariff');
+
+    btnSale.addEventListener('click', () => sliderSale.goTo('next'));
+    btnTariff.addEventListener('click', () => {
+        sliderTariff.goTo('next');
+        sliderRegion.goTo('next');
+    });
+
+    const sliderTariff = tns({
         container: '.carrusel-tariff',
         items: 1,
-        slideBy: 'page',
+        speed: 600,
+        rewind: true,
         nav: false,
         controls: false,
     });
-
-    var slider2 = tns({
+    const sliderRegion = tns({
         container: '.carrusel-region',
         items: 1,
-        slideBy: 'page',
+        speed: 600,
+        rewind: true,
+        nav: false,
+        controls: false,
+    });
+    const sliderSale = tns({
+        container: '.carrusel-sale',
+        items: 4,
+        slideBy: "page",
+        speed: 800,
+        rewind: false,
         nav: false,
         controls: false,
     });
 
+    //Modal Call
+    const btnConsultation = document.querySelector('.button_consultation');
+    const form = document.querySelector('.modal__call');
+    const thanks = document.querySelector('.modal__thanks');
 
-    document.querySelector('.button_service').addEventListener('click', (e) => {
-        slider.goTo('next');
-        slider2.goTo('next');
-    })
 
+
+
+    btnConsultation.addEventListener('click', () => {
+        showModal(form);
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            e.target.reset();
+            closeModal();
+            showModal(thanks);
+            setTimeout(closeModal, 2500);
+
+        });
+
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            console.log(e.target);
+            if (e.target === document.querySelector('.modal__overlay')) {
+                closeModal();
+            }
+        });
+    });
+
+    function showModal(modal) {
+        document.body.style.overflow = 'hidden';
+        document.querySelector('.modal__overlay').classList.add('show-modal');
+        modal.classList.add('show-modal');
+        modal.scrollIntoView({
+            block: "center",
+            behavior: "smooth"
+        });
+    }
+
+    function closeModal() {
+        const modal = document.querySelector('.modal');
+        const form = modal.querySelector('.modal__call');
+        const thanks = modal.querySelector('.modal__thanks');
+
+        document.body.style.overflow = '';
+        modal.querySelector('.modal__overlay').classList.remove('show-modal');
+        form.classList.remove('show-modal');
+        thanks.classList.remove('show-modal');
+    }
 
 
 
