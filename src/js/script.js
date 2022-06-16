@@ -71,43 +71,56 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     // SLIDER
-    const btnSale = document.querySelector('#btn-carrusel-sale'),
-        btnTariff = document.querySelector('#btn-carrusel-tariff'),
-        adaptiveBtnTariff = document.querySelector('#btn-tariff'),
-        adaptiveBtnRegion = document.querySelector('#btn-region'),
-        adaptiveBtnSale = document.querySelector('#btn-sale');
+    const btnTariff = document.querySelector('#btn-carrusel-tariff'),
+        // adaptiveBtnTariff = document.querySelector('#btn-tariff'),
+        // adaptiveBtnRegion = document.querySelector('#btn-region'),
+        BtnSale = document.querySelector('#btn-sale');
 
-    adaptiveBtnTariff.addEventListener('click', () => sliderTariff.goTo('next'));
-    adaptiveBtnRegion.addEventListener('click', () => sliderRegion.goTo('next'));
-    adaptiveBtnSale.addEventListener('click', () => sliderSale.goTo('next'));
+    // adaptiveBtnTariff.addEventListener('click', () => sliderTariff.goTo('next'));
 
-    btnSale.addEventListener('click', () => sliderSale.goTo('next'));
+
+    // adaptiveBtnRegion.addEventListener('click', () => sliderRegion.goTo('next'));
+
+
+    BtnSale.addEventListener('click', () => sliderSale.goTo('next'));
+
+    // btnSale.addEventListener('click', () => sliderSale.goTo('next'));
     btnTariff.addEventListener('click', () => {
         sliderTariff.goTo('next');
-        sliderRegion.goTo('next');
+        // sliderRegion.goTo('next');
     });
 
     const sliderTariff = tns({
         container: '.carrusel-tariff',
         items: 1,
         speed: 600,
-        rewind: true,
-        nav: false,
-        controls: false,
-    });
-    const sliderRegion = tns({
-        container: '.carrusel-region',
-        items: 1,
-        speed: 600,
-        rewind: true,
         nav: false,
         controls: false,
         responsive: {
             700: {},
-            1366: {},
-            1919: {}
+            1366: {
+                // edgePadding: 100,
+                gutter: 10,
+            },
+            1919: {
+                edgePadding: 0,
+                gutter: 0,
+            }
         }
     });
+    // const sliderRegion = tns({
+    //     container: '.carrusel-region',
+    //     items: 1,
+    //     speed: 600,
+    //     rewind: true,
+    //     nav: false,
+    //     controls: false,
+    //     responsive: {
+    //         700: {},
+    //         1366: {},
+    //         1919: {}
+    //     }
+    // });
     const sliderSale = tns({
         container: '.carrusel-sale',
         items: 4,

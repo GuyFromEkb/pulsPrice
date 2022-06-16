@@ -403,11 +403,11 @@
             }
         }
     }
-    #btn-tariff,
-    #btn-region,
-    #btn-sale {
-        display: block;
-    }
+    // #btn-tariff,
+    // #btn-region,
+    // #btn-sale {
+    //     display: block;
+    // }
     .service {
         &__descrp {
             font-size: 14px;
@@ -441,7 +441,11 @@
             bottom: 30px;
         }
         &_slide {
-            display: none;
+            width: 60px;
+            height: 60px;
+            svg {
+                width: 28px;
+            }
         }
     }
     .title {
@@ -475,10 +479,8 @@
             line-height: 19px;
         }
     }
-    #btn-tariff,
-    #btn-region,
     #btn-sale {
-        display: block;
+        top: 277px;
     }
 }
 

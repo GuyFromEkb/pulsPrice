@@ -23,6 +23,7 @@
         width: 350px;
     }
     &_slide {
+        z-index: 1;
         position: absolute;
         top: 50%;
         right: -23px;
@@ -35,7 +36,9 @@
         }
     }
     &_service {
-        top: 0;
+        z-index: 1;
+        top: auto;
+        bottom: -90.5px;
         transform: none;
         &:active {
             transform: scale(1.02);
@@ -81,19 +84,18 @@
     }
 }
 
-#btn-tariff,
-#btn-region,
-#btn-sale {
-    z-index: 2;
-    top: 468px;
-    width: 50px;
-    height: 50px;
-    svg {
-        width: 25px;
-    }
-    display: none;
-}
-
+// #btn-tariff,
+// #btn-region,
+// #btn-sale {
+//     z-index: 2;
+//     top: 468px;
+//     width: 50px;
+//     height: 50px;
+//     svg {
+//         width: 25px;
+//     }
+//     display: none;
+// }
 #btn-region {
     top: auto;
     bottom: 700px;
