@@ -71,10 +71,10 @@
         &__block {
             width: 317px;
             height: 171px;
-            padding: 34px 25px 0 34px;
+            padding: 34px 25px 0 27px;
             &_title {
                 img {
-                    margin-right: 20px;
+                    margin-right: 13px;
                 }
                 p {
                     font-size: 14px;
@@ -83,7 +83,7 @@
             }
             &_description {
                 margin-top: 10px;
-                padding-left: 58px;
+                padding-left: 52px;
                 font-size: 14px;
                 line-height: 19px;
             }
@@ -321,6 +321,99 @@
             }
         }
     }
+    .slide-region_one,
+    .slide-region_two {
+        .region {
+            width: 1011px;
+            height: 910px;
+            padding: 30px 0 0 30px;
+            &_descrp {
+                font-size: 14px;
+                line-height: 19px;
+                width: 414px;
+            }
+            &_hr {
+                margin-top: 43px;
+                margin-bottom: 20px;
+                width: 414px;
+            }
+            &_wrap-top {
+                display: flex;
+            }
+            &_wrap-left {
+                margin-right: 30px;
+            }
+            &_subtitle {
+                margin: 0;
+            }
+            &_descrp-second {
+                width: 460px;
+            }
+            &_privilege {
+                grid-template-columns: 331px 409px;
+                p {
+                    font-size: 14px;
+                    line-height: 19px;
+                }
+            }
+            &_map {
+                display: none;
+            }
+        }
+    }
+    .slide-region_two {
+        .region {
+            background: url(../img/region/russia-bg.png) no-repeat right bottom rgb(255, 255, 255);
+            &_map {
+                display: none;
+            }
+        }
+    }
+    .slide-region_one {
+        .region {
+            background: url(../img/region/region-bg.png) no-repeat right bottom rgb(255, 255, 255);
+            width: 1011px;
+            height: 473px;
+            &_hr {
+                margin: 30px 0
+            }
+            &_descrp {
+                width: 500px;
+            }
+            &_descrp-second {
+                width: 540px;
+                margin-top: 20px;
+            }
+        }
+    }
+    .slide-region_three {
+        .region {
+            background: url(../img/region/product-managment-bg.png) no-repeat right bottom rgb(255, 255, 255);
+            &_descrp {
+                width: 560px;
+            }
+            &_list {
+                li {
+                    padding-left: 35px;
+                    font-size: 14px;
+                    line-height: 19px;
+                    background: url(../icons/service/ul-chek.png) no-repeat 0 50%;
+                    background-size: 20px 20px;
+                }
+            }
+        }
+    }
+    #btn-tariff,
+    #btn-region,
+    #btn-sale {
+        display: block;
+    }
+    .service {
+        &__descrp {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
     .button {
         font-size: 16px;
         line-height: 22px;
@@ -338,6 +431,18 @@
             width: 190.26px;
             height: 50px;
         }
+        &_region-slidetwo {
+            margin-top: 40px;
+            position: static;
+        }
+        &_region {
+            Width: 411px;
+            Height: 50px;
+            bottom: 30px;
+        }
+        &_slide {
+            display: none;
+        }
     }
     .title {
         font-size: 24px;
@@ -351,6 +456,11 @@
             line-height: 25px;
             margin-top: 51px;
         }
+        &_region {
+            font-size: 18px;
+            line-height: 25px;
+            margin-top: 0;
+        }
     }
     .subtitle {
         font-size: 18px;
@@ -360,6 +470,15 @@
             font-size: 14px;
             line-height: 19px;
         }
+        &_region {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+    #btn-tariff,
+    #btn-region,
+    #btn-sale {
+        display: block;
     }
 }
 

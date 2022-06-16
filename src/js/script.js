@@ -4,7 +4,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const linkShowService = document.querySelector('.tariff__current_wrap-link');
 
     linkShowService.addEventListener('click', (e) => {
-        console.log('clickssssssss');
         e.preventDefault();
         btnShowTariff.click();
     })
@@ -73,7 +72,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // SLIDER
     const btnSale = document.querySelector('#btn-carrusel-sale'),
-        btnTariff = document.querySelector('#btn-carrusel-tariff');
+        btnTariff = document.querySelector('#btn-carrusel-tariff'),
+        adaptiveBtnTariff = document.querySelector('#btn-tariff'),
+        adaptiveBtnRegion = document.querySelector('#btn-region'),
+        adaptiveBtnSale = document.querySelector('#btn-sale');
+
+    adaptiveBtnTariff.addEventListener('click', () => sliderTariff.goTo('next'));
+    adaptiveBtnRegion.addEventListener('click', () => sliderRegion.goTo('next'));
+    adaptiveBtnSale.addEventListener('click', () => sliderSale.goTo('next'));
 
     btnSale.addEventListener('click', () => sliderSale.goTo('next'));
     btnTariff.addEventListener('click', () => {
@@ -96,6 +102,11 @@ window.addEventListener('DOMContentLoaded', () => {
         rewind: true,
         nav: false,
         controls: false,
+        responsive: {
+            700: {},
+            1366: {},
+            1919: {}
+        }
     });
     const sliderSale = tns({
         container: '.carrusel-sale',
@@ -148,7 +159,6 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
         document.addEventListener('click', (e) => {
-            console.log(e.target);
             if (e.target === document.querySelector('.modal__overlay')) {
                 closeModal();
             }
