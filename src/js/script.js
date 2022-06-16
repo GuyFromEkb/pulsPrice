@@ -84,11 +84,14 @@ window.addEventListener('DOMContentLoaded', () => {
         speed: 600,
         controls: false,
         responsive: {
+            320: {
+                mouseDrag: true,
+
+            },
             765: {
                 gutter: 50,
                 nav: true,
                 items: 1,
-                mouseDrag: true,
             },
             1349: {
                 touch: false,

@@ -510,7 +510,7 @@
             margin-right: 12px;
             cursor: pointer;
             width: 60px;
-            height: 60px;
+            height: 100%;
             background: url(../icons/menu/hamburger.png) no-repeat center $blue;
         }
     }
@@ -897,7 +897,221 @@
     }
     .main {
         max-width: 320px;
-        padding: 0 20px;
+        padding: 0 20px 40px 20px;
+        &__header {
+            height: 48px;
+        }
+        &__hamburger {
+            margin-right: 14px;
+        }
+    }
+    .tariff {
+        &__info {
+            height: 158px;
+            display: block;
+        }
+        &__current {
+            width: 100%;
+            padding: 30.5px 0 0 20px;
+        }
+        &__wrap {
+            display: none;
+        }
+        &__question {
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            &-mark {
+                width: 100%;
+                height: 24px;
+                svg {
+                    height: 10px;
+                    width: auto;
+                }
+            }
+            &-desrp {
+                padding: 10px 20px;
+                height: 163px;
+                p {
+                    font-size: 14px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+    .order {
+        &__wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 130px);
+        }
+        &__block {
+            margin-top: 20px;
+            padding: 10px 0 0 10px;
+            width: auto;
+            height: 130px;
+            &_title {
+                img {
+                    width: auto;
+                    height: 24px;
+                    object-fit: cover;
+                }
+                p {
+                    width: 110px;
+                    font-size: 13px;
+                    line-height: 16px;
+                    margin-top: 10px;
+                }
+            }
+            &_description {
+                display: none;
+            }
+        }
+        &__big-block {
+            .order__block_title {
+                flex-direction: column;
+                align-items: flex-start;
+                p {
+                    margin-top: 10px;
+                    width: auto;
+                }
+            }
+        }
+    }
+    .rising {
+        &__wrap {
+            flex-direction: column;
+        }
+        &__block {
+            background: url(../img/rising/lamp-bg320.png) no-repeat right bottom rgb(255, 255, 255);
+            margin-top: 20px;
+            width: 100%;
+            &:nth-child(2) {
+                background: url(../img/rising/worker-bg320.png) no-repeat right bottom rgb(255, 255, 255);
+            }
+        }
+        p {
+            margin-top: 10px;
+        }
+    }
+    .service {
+        &__descrp {
+            width: 104%;
+        }
+    }
+    .slide-region_one,
+    .slide-region_two {
+        .region {
+            padding: 20px 20px 0 20px;
+            width: 100%;
+            height: 780px;
+            &_descrp {
+                width: 240px;
+            }
+            &_hr {
+                width: 227px;
+                position: absolute;
+                top: 278px;
+            }
+            &_subtitle-second {
+                margin-top: 54px;
+            }
+            &_privilege {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                column-gap: 30px;
+            }
+            &_colum-one,
+            &_colum-two {
+                p {
+                    width: 225px;
+                }
+            }
+        }
+    }
+    .slide-region_two {
+        .region {
+            margin-top: 0;
+            background: url(../img/region/russia-bg320.png) no-repeat right top rgb(255, 255, 255);
+        }
+    }
+    .slide-region_one {
+        .region {
+            background: url(../img/region/region-bg320.png) no-repeat right top rgb(255, 255, 255);
+            height: 642px;
+            &_title {
+                width: 155px;
+            }
+            &_hr {
+                position: static;
+            }
+            &_descrp-second {
+                margin-top: 10px;
+            }
+            &_privilege {
+                grid-template-columns: 320px 262px;
+            }
+        }
+    }
+    .slide-region_three {
+        .region {
+            height: 584px;
+            background: url(../img/region/product-managment-bg320.png) no-repeat right top rgb(255, 255, 255);
+            &_list {
+                li {
+                    margin-top: 12.5px;
+                }
+            }
+        }
+    }
+    .sale {
+        &__block {
+            width: 100%;
+            height: 400px;
+            padding: 20px 20px 0 20px;
+            &_picture {
+                width: 100%;
+                height: auto;
+            }
+            &_descrp {
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+    }
+    .button {
+        padding: 7px 20px;
+        font-size: 14px;
+        line-height: 19px;
+        &_rising {
+            height: 50px;
+            width: 240px;
+        }
+        &_consultation {
+            font-size: 16px;
+            line-height: 22px;
+            width: 100%;
+        }
+        &_region {
+            Width: 240px;
+            Height: 54px;
+        }
+    }
+    .title {
+        font-size: 14px;
+        line-height: 20px;
+        &_rising {
+            width: 155px;
+        }
+    }
+    .subtitle {
+        font-size: 14px;
+        line-height: 20px;
+        &_sale {
+            font-size: 14px;
+            line-height: 25px;
+        }
     }
 }
 
