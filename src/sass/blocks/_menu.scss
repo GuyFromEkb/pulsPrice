@@ -1,4 +1,5 @@
 .menu {
+    background-color: #fff;
     border: 6px solid rgba(94, 116, 145, 0.2);
     border-top: 8px solid rgba(94, 116, 145, 0.2);
     border-right: none;
@@ -6,6 +7,7 @@
     position: absolute;
     height: 100%;
     max-width: 320px;
+    transition: .4s;
     &__title {
         position: relative;
         padding-left: 30px;

@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
     linkShowService.addEventListener('click', (e) => {
         e.preventDefault();
         btnShowTariff.click();
-    })
+    });
 
 
     //MENU
@@ -72,35 +72,29 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // SLIDER
     const btnTariff = document.querySelector('#btn-carrusel-tariff'),
-        // adaptiveBtnTariff = document.querySelector('#btn-tariff'),
-        // adaptiveBtnRegion = document.querySelector('#btn-region'),
         BtnSale = document.querySelector('#btn-sale');
 
-    // adaptiveBtnTariff.addEventListener('click', () => sliderTariff.goTo('next'));
-
-
-    // adaptiveBtnRegion.addEventListener('click', () => sliderRegion.goTo('next'));
-
-
     BtnSale.addEventListener('click', () => sliderSale.goTo('next'));
+    btnTariff.addEventListener('click', () => sliderTariff.goTo('next'));
 
-    // btnSale.addEventListener('click', () => sliderSale.goTo('next'));
-    btnTariff.addEventListener('click', () => {
-        sliderTariff.goTo('next');
-        // sliderRegion.goTo('next');
-    });
 
     const sliderTariff = tns({
         container: '.carrusel-tariff',
         items: 1,
         speed: 600,
-        nav: false,
         controls: false,
         responsive: {
-            700: {},
-            1366: {
-                // edgePadding: 100,
-                gutter: 10,
+            765: {
+                gutter: 50,
+                nav: true,
+                items: 1,
+                mouseDrag: true,
+            },
+            1349: {
+                touch: false,
+                mouseDrag: false,
+                nav: false,
+                gutter: 13,
             },
             1919: {
                 edgePadding: 0,
@@ -108,31 +102,22 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-    // const sliderRegion = tns({
-    //     container: '.carrusel-region',
-    //     items: 1,
-    //     speed: 600,
-    //     rewind: true,
-    //     nav: false,
-    //     controls: false,
-    //     responsive: {
-    //         700: {},
-    //         1366: {},
-    //         1919: {}
-    //     }
-    // });
     const sliderSale = tns({
         container: '.carrusel-sale',
-        items: 4,
         slideBy: "page",
         speed: 800,
-        rewind: false,
-        nav: false,
         controls: false,
         responsive: {
-            700: {},
-            1366: {
+            765: {
                 items: 2,
+                nav: true,
+                mouseDrag: true,
+                gutter: 50
+            },
+            1349: {
+                touch: false,
+                mouseDrag: false,
+                nav: false,
                 edgePadding: 100,
                 gutter: 120,
             },
@@ -148,9 +133,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const btnConsultation = document.querySelector('.button_consultation');
     const form = document.querySelector('.modal__call');
     const thanks = document.querySelector('.modal__thanks');
-
-
-
 
     btnConsultation.addEventListener('click', () => {
         showModal(form);
@@ -199,8 +181,34 @@ window.addEventListener('DOMContentLoaded', () => {
         thanks.classList.remove('show-modal');
     }
 
+    //Menu-Hamburger
+
+    const hamburger = document.querySelector('.main__hamburger');
+    const menu = document.querySelector('.menu');
+    hamburger.addEventListener('click', () => {
+
+        openMenu();
+        document.addEventListener('click', (e) => {
 
 
+            if (e.target === document.querySelector('.modal__overlay') ||
+                e.target.closest('.menu__item')) {
+                closeMenu();
+            }
+        });
+
+
+    });
+
+    function openMenu() {
+        document.querySelector('.modal__overlay').classList.add('show-modal');
+        menu.classList.add('menu_active');
+    }
+
+    function closeMenu() {
+        document.querySelector('.modal__overlay').classList.remove('show-modal');
+        menu.classList.remove('menu_active');
+    }
 
 
 
