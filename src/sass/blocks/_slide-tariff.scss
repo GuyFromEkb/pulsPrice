@@ -179,3 +179,10 @@
         }
     }
 }
+
+.adaptiv-stars {
+    display: none;
+    &:hover {
+        text-decoration: none;
+    }
+}

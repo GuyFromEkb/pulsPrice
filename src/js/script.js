@@ -94,6 +94,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 items: 1,
             },
             1349: {
+                rewind: true,
                 touch: false,
                 mouseDrag: false,
                 nav: false,
@@ -206,11 +207,16 @@ window.addEventListener('DOMContentLoaded', () => {
     function openMenu() {
         document.querySelector('.modal__overlay').classList.add('show-modal');
         menu.classList.add('menu_active');
+        menu.classList.add('menu_zindex');
     }
 
     function closeMenu() {
         document.querySelector('.modal__overlay').classList.remove('show-modal');
         menu.classList.remove('menu_active');
+        setTimeout(() => {
+            menu.classList.remove('menu_zindex');
+        }, 400);
+
     }
 
 

@@ -250,7 +250,7 @@
                 }
             }
             &_other {
-                margin-right: 147px;
+                margin-right: 155px;
                 float: right;
                 font-size: 14px;
                 line-height: 19px;
@@ -481,12 +481,12 @@
 
 @media (max-width: 1349px) {
     .menu {
+        border: none;
         height: 640px;
         left: 0;
         transform: translateX(-100%);
         &_active {
             transform: translateX(0);
-            z-index: 3;
         }
     }
     .container {
@@ -905,6 +905,19 @@
             margin-right: 14px;
         }
     }
+    .menu {
+        width: 230px;
+        height: 614px;
+        &__item {
+            padding-left: 20px;
+            &::after {
+                right: 20px;
+            }
+            a {
+                font-size: 11px;
+            }
+        }
+    }
     .tariff {
         &__info {
             height: 158px;
@@ -1080,6 +1093,76 @@
             }
         }
     }
+    .adaptiv-stars {
+        display: block;
+        margin-top: 25px;
+        .package_stars {
+            flex-direction: row;
+            margin-top: 10px;
+            width: 240px;
+            height: 60px;
+        }
+        .package_name {
+            font-size: 14px;
+            line-height: 19px;
+            margin-right: 15px;
+        }
+    }
+    .slide__bussines {
+        display: block;
+        background: url(../img/service/bussines320.png) no-repeat right top rgb(255, 255, 255);
+        width: 100%;
+        height: 780px;
+        padding: 20px;
+        .info {
+            padding: 0;
+            &_descrp {
+                width: 240px;
+            }
+            &_wrap-right {
+                margin: 20px 0 0 0;
+                padding: 0;
+            }
+            &_list {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 240px;
+                li {
+                    margin-top: 0;
+                }
+            }
+        }
+        .packages {
+            display: none;
+        }
+    }
+    .slide__all-in {
+        background: url(../img/service/all-in320.png) no-repeat right top rgb(255, 255, 255);
+        .info {
+            &_list {
+                margin-bottom: 0;
+            }
+            &_other {
+                margin: 10px 87px 30px 0;
+            }
+        }
+        .adaptiv-stars {
+            margin: 0;
+        }
+    }
+    .slide__start {
+        background: url(../img/service/start320.png) no-repeat right top rgb(255, 255, 255);
+        .info {
+            &_list {
+                margin-bottom: 0;
+            }
+            &_other {
+                margin: 10px 87px 15px 0;
+            }
+        }
+    }
     .button {
         padding: 7px 20px;
         font-size: 14px;
@@ -1104,6 +1187,9 @@
         &_rising {
             width: 155px;
         }
+        &_info {
+            margin-top: 20px;
+        }
     }
     .subtitle {
         font-size: 14px;
@@ -1111,6 +1197,44 @@
         &_sale {
             font-size: 14px;
             line-height: 25px;
+        }
+        &_info {
+            width: auto;
+        }
+    }
+    .modal {
+        &__form {
+            margin-top: 20px;
+            input {
+                font-size: 16px;
+                padding: 0 38px;
+                width: 220px;
+                height: 45px;
+            }
+        }
+        &__btn {
+            height: 45px;
+            margin-top: 20px;
+        }
+        &__call,
+        &__thanks {
+            padding: 0;
+            padding-top: 20px;
+            width: 280px;
+            Height: 220px;
+        }
+        &__subtitle {
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+        }
+        &__thanks {
+            padding-top: 42px;
+            width: 300px;
+            Height: 105px;
+            .modal__subtitle {
+                font-size: 18px;
+            }
         }
     }
 }
