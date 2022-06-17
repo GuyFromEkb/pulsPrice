@@ -912,25 +912,26 @@ var tns = function() {
             if ($e) {
                 var e = xi(t);
                 Ze.x = e.clientX, Ze.y = e.clientY, I ? Ue || (Ue = Oi(function() {
-                    ! function t(e) {
-                        if (!Yt) return void($e = !1);
-                        Di(Ue);
-                        $e && (Ue = Oi(function() { t(e) }));
-                        "?" === Yt && (Yt = Mi());
-                        if (Yt) {
-                            !be && Ci(e) && (be = !0);
-                            try { e.type && Ut.emit(Ci(e) ? "touchMove" : "dragMove", Si(e)) } catch (t) {}
-                            var n = Je,
-                                i = tn(Ze, _e);
-                            if (!q || ot || rt) n += i, n += "px";
-                            else {
-                                var a = d ? i * ft * 100 / ((st + lt) * Ht) : 100 * i / (st + lt);
-                                n += a, n += "%"
+                        ! function t(e) {
+                            if (!Yt) return void($e = !1);
+                            Di(Ue);
+                            $e && (Ue = Oi(function() { t(e) }));
+                            "?" === Yt && (Yt = Mi());
+                            if (Yt) {
+                                !be && Ci(e) && (be = !0);
+                                try { e.type && Ut.emit(Ci(e) ? "touchMove" : "dragMove", Si(e)) } catch (t) {}
+                                var n = Je,
+                                    i = tn(Ze, _e);
+                                if (!q || ot || rt) n += i, n += "px";
+                                else {
+                                    var a = d ? i * ft * 100 / ((st + lt) * Ht) : 100 * i / (st + lt);
+                                    n += a, n += "%"
+                                }
+                                G.style[Pt] = zt + n + Wt
                             }
-                            G.style[Pt] = zt + n + Wt
-                        }
-                    }(t)
-                })) : ("?" === Yt && (Yt = Mi()), Yt && (be = !0)), be && t.preventDefault()
+                        }(t)
+                    })) : ("?" === Yt && (Yt = Mi()), Yt && (be = !0))
+                    // , be && t.preventDefault()
             }
         }
 
